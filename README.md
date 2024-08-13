@@ -6,7 +6,7 @@ https://docs.google.com/document/d/1pmOVYB1TOTw4_TDSfAZT-gsFpS2ynstB/edit?usp=sh
 # Participantes:
 
 - Julia Guimarães Simão;
-- Mariana Ribeiro.
+- Mariana Costa Ribeiro.
 
 # Mentores:
 
