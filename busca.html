@@ -1,3 +1,14 @@
+<!--
+Busca – 
+Nesta tela deve se buscar um tipo de REGEX por vez, utilizando os RadioButtons para indicar que tipo de busca deseja realizar no TextArea. 
+O resultado esperado são:
+
+“Padrão xpto encontrado, quantidade de ocorrências xxx”, quando existir o item desejado;
+“Padrão xpto não encontrado”, quando não existir o item desejado.
+
+Os resultados devem ser informados utilizando mensagens de alertas.
+-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -24,15 +35,33 @@
             <a href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
             <a href="cadastro.html">Cadastro</a>
         </nav>
-
         <section id="main">
-
+            <section class="borda-circular">
+                <fieldset>
+                    <legend>Selecione o tipo de verificação:</legend>
+                    <input type="radio" id="radio"/>
+                    <label for="radio">Caracteres Especiais</label>
+                    <input type="radio" id="radio"/>
+                    <label for="radio">Digitos Numéricos</label>
+                    <br/>
+                    <input type="radio" id="radio"/>
+                    <label for="radio">Letras Minúsculas</label>&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="radio"/>
+                    <label for="radio">Letras Maiúsculas</label>
+                </fieldset>
+            </section>
+            <br/>
+            <form class="borda-circular">
+                <label for="texto">Escreva seu texto: </label>
+                <br/>
+                <input type="text" name="texto" id="texto"/>
+            </form>
         </section>  
 
         <footer id="footer">
             Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
             Projeto TWIST-2024<br/>
-            <!-- <img src="img/" alt=""> colocar gif no footer, se quiser. -->
+            <img src="img/family-guy-css.gif" alt="css é muito chato. mas, é legal. :)">
             <p>
             links usados para a criação desta página:<br/>
             - google fontes: <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
