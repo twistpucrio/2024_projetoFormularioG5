@@ -16,27 +16,18 @@ Os resultados devem ser informados utilizando mensagens de alertas.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 1 - TWIST</title>
     <link rel="shortcut icon" href="img/logo-twist.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style-all.css">
 </head>
 <body>
     <div id="conteudo">
         <header id="header">
-            <h2>
-                &sstarf; Regex &sstarf;
-            </h2>
-            <h4>
-                Primeiro &star; Projeto &star; TWIST-2024
-            </h4>
+            
+            
         </header>
-        <nav id="navigator">
-            <a href="index.html">Home</a> &starf;
-            <a href="busca.html">Busca</a> &starf;
-            <a href="arquivo.html">Arquivo</a> &starf;
-            <a href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
-            <a href="cadastro.html">Cadastro</a>
-        </nav>
+        
         <section id="main">
-            <h2>Busca</h2>
+            <h1>Busca</h1>
+            <br/><br/>
             <section class="borda-circular">
                 <fieldset>
                     <legend>Selecione o tipo de verificação:</legend>
@@ -51,21 +42,30 @@ Os resultados devem ser informados utilizando mensagens de alertas.
                     <label for="radio">Letras Maiúsculas</label>
                 </fieldset>
             </section>
-            <br/>
+            <br/><br/><br/>
             <form class="borda-circular">
                 <label for="texto">Escreva seu texto: </label>
                 <br/>
-                <input type="text" name="texto" id="texto"/>
+                <textarea name="texto" id="texto" cols="50" rows="10"></textarea> <!--Tirar dúvida, quando coloca rows 0, 
+                                                                                   outras informações somem da pagina-->
             </form>
         </section>  
-        <br/>
+        <br/><br/><br/><br/>
+        <nav id="navigator"> <!--Perguntar como fazemos para colocar a nav na lateral da tela-->
+            <a id="home" href="index.html">Home</a> &starf;
+            <a id="busca" href="busca.html">Busca</a> &starf;
+            <a id="arquivo" href="arquivo.html">Arquivo</a> &starf;
+            <a id="substituir" href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
+            <a id="cadastro" href="cadastro.html">Cadastro</a>
+        </nav>
+        <br/><br/><br/><br/><br/><br/>
         <footer id="footer">
-            Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
-            Projeto TWIST-2024<br/>
-            <img src="img/family-guy-css.gif" alt="css é muito chato. mas, é legal. :)">
-            <p>
-            links usados para a criação desta página:<br/>
-            - google fontes: <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
+            <p class="devs">Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
+            Projeto TWIST-2024<br/></p>
+            <!-- <img src="img/" alt=""> colocar gif no footer, se quiser. -->
+            <p class="links">
+            Links usados para a criação desta página:<br/>
+            - google fontes: <a class="link" href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
             - paleta de cores: <!-- <a href="" target="_blank"></a><br/> -> colocar o link da paleta ou paletas escolhidas depois. -->
             </p>
         </footer>
