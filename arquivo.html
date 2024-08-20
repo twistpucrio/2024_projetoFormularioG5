@@ -16,25 +16,14 @@ Arquivo –
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 1 - TWIST</title>
     <link rel="shortcut icon" href="img/logo-twist.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/.css">
+    <link rel="stylesheet" href="style/style-all.css">
 </head>
 <body>
     <div id="conteudo">
         <header id="header">
-            <h2>
-                &sstarf; Regex &sstarf;
-            </h2>
-            <h4>
-                Primeiro &star; Projeto &star; TWIST-2024
-            </h4>
+    
         </header>
-        <nav id="navigator">
-            <a href="index.html">Home</a> &starf;
-            <a href="busca.html">Busca</a> &starf;
-            <a href="arquivo.html">Arquivo</a> &starf;
-            <a href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
-            <a href="cadastro.html">Cadastro</a>
-        </nav>
+
         <section id="main">
             <h1>Arquivo</h1>
             <br/><br/>
@@ -50,6 +39,7 @@ Arquivo –
                 <input type="radio" name="seletor" value="csv"/>
                 <label for="radio">CSV</label>
             </fieldset>
+            <br/><br/><br/>
             <fieldset>
                 <legend>Regras nomenclatura:</legend>
                 <p>
@@ -60,22 +50,38 @@ Arquivo –
                     &starf;Deve ter o tamanho mínimo de 8 caracteres e máximo de 15.
                 </p>
             </fieldset>
+            <br/><br/><br/>
             <form>
                 <label for="arq">Arquivo:</label>
-                <input type="file" name="arq" id="arq">
-                <br/>
-                <input type="button" value="Limpar" id="btnLimpar">
-                <input type="button" value="Submeter" id="btnSubmeter">
+                <input  type="file" name="arq" id="arq">
+                <br/><br/><br/>
+                <input class="bt" type="button" value="Limpar" id="btnLimpar">
+                &nbsp;&nbsp;&nbsp;
+                <input class="bt" type="button" value="Submeter" id="btnSubmeter">
             </form>
         </section>  
+
+        <br/><br/><br/><br/>
+        <nav id="navigator"> <!--Perguntar como fazemos para colocar a nav na lateral da tela-->
+            <a id="home" href="index.html">Home</a> &starf;
+            <a id="busca" href="busca.html">Busca</a> &starf;
+            <a id="arquivo" href="arquivo.html">Arquivo</a> &starf;
+            <a id="substituir" href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
+            <a id="cadastro" href="cadastro.html">Cadastro</a>
+        </nav>
+        <br/><br/><br/><br/><br/><br/>
+
         <footer id="footer">    
-            Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
-            Projeto TWIST-2024<br/>
-            <img src="img/html.gif" alt="gif da logo do html.">
-            <p>
+            <p class="devs">Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
+                Projeto TWIST-2024<br/></p>
+            <img src="img/html.gif" alt="gif da logo do html." width="70" height="70">
+            <p class="links">
             links usados para a criação desta página:<br/>
-            - google fontes: <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
-            - paleta de cores: <a href="https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1" target="_blank">https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1</a><br/>
+
+            - google fontes: <a class="link" href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
+            - paleta de cores:  <a class="link" href="https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1" target="_blank">https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1 </a><br/>  
+
+            
             </p>
         </footer>
     </div>
