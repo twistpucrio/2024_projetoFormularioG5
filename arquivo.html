@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 1 - TWIST</title>
     <link rel="shortcut icon" href="img/logo-twist.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/style-all.css">
+    <link rel="stylesheet" href="style/.css">
 </head>
 <body>
     <div id="conteudo">
@@ -26,14 +26,43 @@
         </nav>
 
         <section id="main">
-
+            <h1>Arquivo</h1>
+            <br/><br/>
+            <fieldset>
+                <legend>Selecione o tipo de arquivo:</legend>
+                <input type="radio" name="seletor" value="jpg"/>
+                <label for="radio">JPG/JPEG/PNG</label>
+                <input type="radio" name="seletor" value="doc"/>
+                <label for="radio">DOC</label>
+                <br/>
+                <input type="radio" name="seletor" value="pdf"/>
+                <label for="radio">PDF</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="seletor" value="csv"/>
+                <label for="radio">CSV</label>
+            </fieldset>
+            <fieldset>
+                <legend>Regras nomenclatura:</legend>
+                <p>
+                    &starf; Não possibilitar preencher o nome do arquivo com caracteres especiais (exceto underscore);<br/>
+                    <br/>
+                    &starf;Iniciar com letra maiúscula;<br/>
+                    <br/>
+                    &starf;Deve ter o tamanho mínimo de 8 caracteres e máximo de 15.
+                </p>
+            </fieldset>
+            <form>
+                <label for="arq">Arquivo:</label>
+                <input type="file" name="arq" id="arq">
+                <br/>
+                <input type="button" value="Limpar" id="btnLimpar">
+                <input type="button" value="Submeter" id="btnSubmeter">
+            </form>
         </section>  
         
-        <footer id="footer">
-            
+        <footer id="footer">    
             Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
             Projeto TWIST-2024<br/>
-            <!-- <img src="img/" alt=""> colocar gif no footer, se quiser. -->
+            <img src="img/html.gif" alt="gif da logo do html.">
             <p>
             links usados para a criação desta página:<br/>
             - google fontes: <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
