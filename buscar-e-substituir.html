@@ -1,3 +1,11 @@
+<!--
+Buscar e Substituir –
+
+Esta tela funciona como um pesquisar e substituir, o usuário deve indicar o que deseja qual padrão deve ser procurado no TextArea, no campo pesquisa e preencher o campo
+Os resultados podem ser informados utilizando mensagens de alertas.
+
+-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,17 +34,31 @@
         </nav>
 
         <section id="main">
-
+            <h2>Buscar e Substituir</h2>
+            <form>
+                <label for="pesquisa">Pesquisa:</label>
+                <input type="text" name="pesquisa" id="pesquisa">
+                <br/><br/>
+                <label for="substituir">Substituir:</label>
+                <input type="text" name="substituir" id="substituir">
+                <br/><br/>
+                <label for="texto">Escreva seu texto:</label>
+                <br/>
+                <textarea name="texto" id="texto" cols="60" rows="20"></textarea>
+                <br/><br/>
+                <input type="button" value="Limpar" id="btnLimpar">
+                <input type="button" value="Submeter" id="btnSubmeter">
+            </form>
         </section>  
-
+        <br/>
         <footer id="footer">
             Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
             Projeto TWIST-2024<br/>
-            <!-- <img src="img/" alt=""> colocar gif no footer, se quiser. -->
+            <img src="img/logo-javascript.gif" alt="gif de javascript.">
             <p>
             links usados para a criação desta página:<br/>
             - google fontes: <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
-            - paleta de cores: <!-- <a href="" target="_blank"></a><br/> -> colocar o link da paleta ou paletas escolhidas depois. -->
+            - paleta de cores: <a href="https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev" target="_blank">https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev</a><br/>
             </p>
         </footer>
     </div>
