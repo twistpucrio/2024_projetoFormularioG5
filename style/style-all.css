@@ -67,12 +67,19 @@ nav{
     color: #FF8400;
 }
 
+.bt{
+    background-color: #1c1a1a;
+    color: aliceblue;
+    border-color: #555352;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
 footer{
     width: 100%;
     height: 20%;
     background-color: #1c1a1a;
     padding:8px;  
-    position: fixed;
+    position:static;
     bottom: 0;
     margin: 0 auto;
     color: aliceblue;   
