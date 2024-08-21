@@ -16,32 +16,32 @@ Os resultados devem ser informados utilizando mensagens de alertas.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 1 - TWIST</title>
     <link rel="shortcut icon" href="img/logo-twist.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/style-all.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <div id="conteudo">
         <header id="header">
-
+            <h1>Busca</h1>
         </header>
         <section id="main">
-            <h1>Busca</h1>
+            <form class="borda-circular">
             <br/><br/>
             <section class="borda-circular">
                 <fieldset>
                     <legend id="selecionar">Selecione o tipo de verificação:</legend>
-                    <input type="radio" id="radio"/>
+                    <input type="radio" id="radio" value="radio" name="bolinha" />
                     <label for="radio">Caracteres Especiais</label>
-                    <input type="radio" id="radio"/>
+                    <input type="radio" id="radio1" value="radio1" name="bolinha" />
                     <label for="radio">Digitos Numéricos</label>
                     <br/>
-                    <input type="radio" id="radio"/>
+                    <input type="radio" id="radio2" value="radio2" name="bolinha" />
                     <label for="radio">Letras Minúsculas</label>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="radio"/>
+                    <input type="radio" id="radio3" value="radio3"  name="bolinha" />
                     <label for="radio">Letras Maiúsculas</label>
                 </fieldset>
             </section>
             <br/><br/><br/>
-            <form class="borda-circular">
+            
                 <label id="txt" for="texto">Escreva seu texto: </label>
                 <br/><br/>
                 <textarea name="texto" id="texto" cols="60" rows="20"></textarea>                                                                        
@@ -52,6 +52,7 @@ Os resultados devem ser informados utilizando mensagens de alertas.
             &nbsp;&nbsp;&nbsp;
             <input class="bt" name="validar" type="button" value="validar" id="btnvalidar"/>
         </div>
+         </form>
         <br/><br/><br/><br/>
         <nav id="navigator"> <!-- Perguntar como fazemos para colocar a nav na lateral da tela... -->
             <a id="home" href="index.html">Home</a> &starf;
