@@ -24,9 +24,10 @@ p{
 
 h2{
     color: aliceblue;
-    text-shadow: 0 4px 8px rgb(11, 11, 11);
-    
+    text-shadow: 0 4px 8px rgb(11, 11, 11); 
 }
+
+
 h1{
     color: aliceblue;
     font-size: xxx-large;
@@ -90,6 +91,51 @@ footer{
     height: 60%;
     background-color: #1c1a1a;
     padding:5px;  
+    position:static;
+    bottom: 0;
     margin: 0 auto;
+    color: aliceblue;   
+}
+
+#txt{
+    text-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+#selecionar{
+    text-shadow: 0 4px 8px rgb(11, 11, 11);
+}
+
+.bt{
+    background-color: #1c1a1a;
+    color: aliceblue;
+    border-color: #555352;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.bt:active{
+    background-color: #fb5209;
+}
+
+.caixa{
+    border-color: #555352;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+form{
+    color: aliceblue;
     
+}
+
+fieldset{
+    color: aliceblue;
+    border-width: 2px; 
+    border-style: solid; 
+    margin: 0 auto;
+    width: 25%;
+    
+    border-color: #F54F1B; 
+}
+
+textarea{
+    background-color: #b1afae;
 }
