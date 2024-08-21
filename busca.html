@@ -21,19 +21,14 @@ Os resultados devem ser informados utilizando mensagens de alertas.
 <body>
     <div id="conteudo">
         <header id="header">
-            <h2>
-                &sstarf; Regex &sstarf;
-            </h2>
-            <h4>
-                Primeiro &star; Projeto &star; TWIST-2024
-            </h4>  
+
         </header>
         <section id="main">
             <h1>Busca</h1>
             <br/><br/>
             <section class="borda-circular">
                 <fieldset>
-                    <legend>Selecione o tipo de verificação:</legend>
+                    <legend id="selecionar">Selecione o tipo de verificação:</legend>
                     <input type="radio" id="radio"/>
                     <label for="radio">Caracteres Especiais</label>
                     <input type="radio" id="radio"/>
@@ -47,7 +42,7 @@ Os resultados devem ser informados utilizando mensagens de alertas.
             </section>
             <br/><br/><br/>
             <form class="borda-circular">
-                <label for="texto">Escreva seu texto: </label>
+                <label id="txt" for="texto">Escreva seu texto: </label>
                 <br/><br/>
                 <textarea name="texto" id="texto" cols="60" rows="20"></textarea>                                                                        
         </section>  
@@ -69,11 +64,16 @@ Os resultados devem ser informados utilizando mensagens de alertas.
         <footer id="footer">
             <p class="devs">Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
             Projeto TWIST-2024<br/></p>
-            <img src="img/gif-css.webp" alt="gif de css.">
+            <br/>
+            <section>
+            <img src="img/css.gif" alt="gif de css." width="70" height="70">
+            <img src="img/html.gif" alt="gif de css." width="70" height="70">
+            <img src="img/js.webp" alt="gif de css." width="70" height="70">
+            </section>
             <p class="links">
             Links usados para a criação desta página:<br/>
             - google fontes: <a class="link" href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
-            - paleta de cores: <a href="https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1" target="_blank">https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1</a><br/>
+            - paleta de cores: <a class="link" href="https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1" target="_blank">https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1</a><br/>
             </p>
         </footer>
     </div>

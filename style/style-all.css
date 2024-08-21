@@ -17,6 +17,7 @@ h2{
 h1{
     color: aliceblue;
     font-size: xxx-large;
+    text-shadow: 0 4px 8px rgb(11, 11, 11);
 }
 
 body{
@@ -37,6 +38,14 @@ nav a:hover{
 
 nav{
     color: #ffffffbd;
+}
+
+#txt{
+    text-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+#selecionar{
+    text-shadow: 0 4px 8px rgb(11, 11, 11);
 }
 
 #home{
@@ -76,6 +85,11 @@ nav{
 
 .bt:active{
     background-color: #fb5209;
+}
+
+.caixa{
+    border-color: #555352;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 footer{
