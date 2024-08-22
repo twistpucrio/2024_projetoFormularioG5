@@ -16,7 +16,7 @@ function match_numeros(texto) {
 //caso 2 - busca e match de letras maiúculas.
 
 function buscar_letras_maiusculas(texto) {
-    let letras_maiusculas = texto.search(/\[A-Z]/);
+    let letras_maiusculas = texto.search(/[A-Z]/);
     return letras_maiusculas;
 }
 
@@ -29,7 +29,7 @@ function match_letras_maiusculas(texto) {
 //caso 3 - busca e match de letras minúsculas.
 
 function buscar_letras_minusculas(texto) {
-    let letras_minusculas = texto.search(/\[a-z]/);
+    let letras_minusculas = texto.search(/[a-z]/);
     return letras_minusculas;
 }
 
@@ -42,7 +42,7 @@ function match_letras_minusculas(texto) {
 //caso 4 - busca e match de caracteres especiais.
 
 function buscar_caracteres_especiais(texto) {
-    let caracteres_especiais = texto.search(/\W/);
+    let caracteres_especiais = texto.search(/[^A-Za-z0-9]/);
     return caracteres_especiais;
 }
 
@@ -52,7 +52,13 @@ function match_caracteres_especiais(texto) {
     return lista_caracteres_especiais;
 }
 
-//Botão de limpar o textarea. OK
+//função para obter tamanho (número de ocorrências) de uma lista.
+
+function ocorrencias(lista) {
+    return lista.length;
+}
+
+//botão de limpar o textarea. OK
 
 //id do textarea: texto.
 //name dos seletores (radio): bolinha.
@@ -70,7 +76,7 @@ function limpar(){
 
 window.addEventListener("load", 
     function (){
-        //Evento 1 - Busca no texto na textarea após clicar no botão "Submeter".
+        //evento 1 - busca no texto na textarea após clicar no botão "Submeter".
 
         //id do botão submeter: botao_submeter;
         //name do botão submeter: submeter.
@@ -81,27 +87,19 @@ window.addEventListener("load",
             function(){
                 let texto = document.querySelector('#texto').value;
                 if (texto != "") {
-                    /*
-                        let resp = buscar_numeros(texto);
-                    alert("índice: " + resp + "\n" +
-                        "primeiro número: " + texto[resp]);
-                    
-                    resp = match_numeros(texto);
-                    alert("índice: " + resp + "\n");
-                     */
-                    
                     let bolinhas = document.getElementsByName("bolinha");
+                    let radio_vazio = 0;
                     for (bolinha of bolinhas) {
                         //caso 4 - busca e match de caracteres especiais.
                         if (bolinha.checked && bolinha.value == "cEspecial") { //caracteres especiais.
                             let ocorrencia_cesp = buscar_caracteres_especiais(texto);
 
                             if (ocorrencia_cesp == -1) {
-                                alert("Padrão caracteres especiais não encontrado");
+                                alert("Padrão caracteres especiais não encontrado.");
                             }
 
                             else {
-                                let n_ocorrencias_cesp = match_caracteres_especiais(texto);
+                                let n_ocorrencias_cesp = ocorrencias(match_caracteres_especiais(texto));
                                 alert("Padrão caracteres especiais encontrado, quantidade de ocorrências: " + n_ocorrencias_cesp + ".");
                             }
                         }
@@ -110,49 +108,56 @@ window.addEventListener("load",
                             let ocorrencia_num = buscar_numeros(texto);
 
                             if (ocorrencia_num == -1) {
-                                alert("Padrão números não encontrado");
+                                alert("Padrão números não encontrado.");
                             }
 
                             else {
-                                let n_ocorrencias_num = match_numeros(texto);
+                                let n_ocorrencias_num = ocorrencias(match_numeros(texto));
                                 alert("Padrão números encontrado, quantidade de ocorrências: " + n_ocorrencias_num + ".");
                             }
                         }
                         //caso 2 - busca e match de letras maiúculas.
-                        else if (bolinha.checked && bolinha.value == "") { //letras maiúsculas.
+                        else if (bolinha.checked && bolinha.value == "lMax") { //letras maiúsculas.
                             let ocorrencia_max = buscar_letras_maiusculas(texto);
 
                             if (ocorrencia_max == -1) {
-                                alert("Padrão letras maiúsculas não encontrado");
+                                alert("Padrão letras maiúsculas não encontrado.");
                             }
 
                             else {
-                                let n_ocorrencias_max = match_letras_maiusculas_letras_maiusculas(texto);
+                                alert("match max: " + match_letras_maiusculas(texto));
+                                let n_ocorrencias_max = ocorrencias(match_letras_maiusculas(texto));
                                 alert("Padrão letras maiúsculas encontrado, quantidade de ocorrências: " + n_ocorrencias_max + ".");
                             }
                         }
                         //caso 3 - busca e match de letras minúsculas.
-                        else { //letras minúsculas.
-                            let ocorrencia_min = buscar_letras_maiusculas(texto);
+                        else if (bolinha.checked && bolinha.value == "lMin") { //letras minúsculas.
+                            let ocorrencia_min = buscar_letras_minusculas(texto);
 
                             if (ocorrencia_min == -1) {
-                                alert("Padrão letras minúsculas não encontrado");
+                                alert("Padrão letras minúsculas não encontrado.");
                             }
 
                             else {
-                                let n__ocorrencias_min = match_letras_maiusculas_letras_maiusculas(texto);
-                                alert("Padrão letras minúsculas encontrado, quantidade de ocorrências: " + ocorrencia_min + ".");
+                                alert("match min: " + match_letras_minusculas(texto));
+                                let n_ocorrencias_min = ocorrencias(match_letras_minusculas(texto));
+                                alert("Padrão letras minúsculas encontrado, quantidade de ocorrências: " + n_ocorrencias_min + ".");
+                            }
+                        }
+                        else {
+                            radio_vazio += 1;
+                            if (radio_vazio == 4) {
+                                alert("Nenhuma opção foi marcada. Não foi possível submeter o formulário.");
                             }
                         }
                     }
-
                 }
                 else {
-                    alert("O campo texto está vazio...");
+                    alert("O campo texto está vazio.");
                 }
             }
         )
-        //Evento 2 - limpar a textarea após clicar no botão "Limpar".
+        //evento 2 - limpar a textarea após clicar no botão "Limpar".
 
         let botao_limpar = document.querySelector("#botao_limpar");
 
@@ -161,3 +166,5 @@ window.addEventListener("load",
         });
     }
 )
+
+//COMPLETO
