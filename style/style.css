@@ -34,6 +34,12 @@ h1{
     text-shadow: 0 4px 8px rgb(11, 11, 11);
 }
 
+.subtitulo {
+    color: aliceblue;
+    font-weight: lighter;
+    text-shadow: 0 4px 8px rgb(11, 11, 11);
+}
+
 #desc{
     text-shadow: 0 4px 8px rgb(0, 0, 0);
 }
