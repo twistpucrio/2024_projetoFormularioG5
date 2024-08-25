@@ -17,32 +17,72 @@
             <h4 class="subtitulo">
                 &sstarf; Primeiro Projeto TWIST-2024 &sstarf;
             </h4>
+            <nav id="navigator">
+                <a id="home" href="index.html">Home</a> &starf;
+                <a id="busca" href="busca.html">Busca</a> &starf;
+                <a id="arquivo" href="arquivo.html">Arquivo</a> &starf;
+                <a id="substituir" href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
+                <a id="cadastro" href="cadastro.html">Cadastro</a>
+            </nav>
+            <br/>
         </header>
-        <nav id="navigator">
-            <a href="index.html">Home</a> &starf;
-            <a href="busca.html">Busca</a> &starf;
-            <a href="arquivo.html">Arquivo</a> &starf;
-            <a href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
-            <a href="cadastro.html">Cadastro</a>
-        </nav>
-
         <section id="main">
+            <br/>
             <form>
-
+                <fieldset>
+                    <legend id="dados">Dados Pessoais:</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" value="Nome" name="Nome"/>
+                    <br/>
+                    <br/>
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" value="ddd.ddd.ddd-dd" name="ddd.ddd.ddd-dd"/>
+                    <br/>
+                    <br/>
+                    <label for="data">Data:</label>
+                    <input type="text" id="data" value="dd/mm/aaaa" name="Data"/>
+                </fieldset>
+                <br/>
+                <fieldset>
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" value="Usuário" name="Usuario"/>
+                    <br/>
+                    <br/>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" value="Email" name="Email"/>
+                    <br/>
+                    <br/>
+                    <label for="senha_1">Senha:</label>
+                    <input type="text" id="senha_1" value="Senha" name="Senha"/>
+                    <br/>
+                    <br/>
+                    <label for="senha_2">Senha:</label>
+                    <input type="text" id="senha_2" value="Senha" name="Senha"/>
+                </fieldset>
+                <br/>
+                <br/>
+                <div id="botao">
+                    <input class="bt" name="limpar" type="button" value="limpar" id="botao_limpar"/>
+                    &nbsp;&nbsp;&nbsp;
+                    <input class="bt" name="submeter" type="button" value="submeter" id="botao_submeter"/>
+                </div>
             </form>
         </section>  
-
+        <br/>
+        <br/>
         <footer id="footer">
-            Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
-            Projeto TWIST-2024<br/>
+            <p class="devs">
+                Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
+                Projeto TWIST-2024<br/>
+            </p>
             <br/>
             <img src="img/css.gif" alt="gif de css." width="70" height="70">
             <img src="img/html.gif" alt="gif de html." width="70" height="70">
             <img src="img/js.webp" alt="gif de javascript." width="70" height="70">
             <p class="links">
-            links usados para a criação desta página:<br/>
-            - google fontes: <a class="link" href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
-            - paleta de cores: <a class="link" href="https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev" target="_blank">https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev</a><br/>
+                links usados para a criação desta página:<br/>
+                - google fontes: <a class="link" href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
+                - paleta de cores: <a class="link" href="https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev" target="_blank">https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev</a><br/>
             </p>
         </footer>
     </div>
