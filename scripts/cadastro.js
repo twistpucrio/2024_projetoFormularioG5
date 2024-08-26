@@ -155,13 +155,13 @@ function limpar(){
     let senha_1 = document.querySelector("#senha_1");
     let senha_2 = document.querySelector("#senha_2");
 
-    nome.value = "Nome";
-    cpf.value = "ddd.ddd.ddd-dd";
-    data.value = "dd/mm/aaaa";
-    usuario.value = "Usuário";
-    email.value = "Email";
-    senha_1.value = "Senha";
-    senha_2.value = "Senha";
+    nome.value = "";
+    cpf.value = "";
+    data.value = "";
+    usuario.value = "";
+    email.value = "";
+    senha_1.value = "";
+    senha_2.value = "";
 }
 
 window.addEventListener("load", 
