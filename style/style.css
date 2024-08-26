@@ -120,14 +120,16 @@ nav{
 }
 
 footer{
-    width: 100%;
-    height: 60%;
+    width: 97%;
+    height: 90%;
     background-color: #1c1a1a;
-    padding:5px;  
-    position:static;
+    padding: 5px;  
+    position: static;
     bottom: 0;
     margin: 0 auto;
     color: aliceblue;   
+    border-radius: 15px;
+    margin-bottom: 1%;
 }
 
 /*******************************************/

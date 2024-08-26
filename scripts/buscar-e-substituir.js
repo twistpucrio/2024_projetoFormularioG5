@@ -40,7 +40,7 @@ function substituir(){
     let textoSubstituido = substitui.value;
 
     let resultado = textoInicial.replace(new RegExp(partePesquisa, "g"), textoSubstituido);
-    alert("Texto substiruído:\n " + resultado);
+    alert("Texto substituído:\n " + resultado);
     texto.value = resultado;
 }
 
