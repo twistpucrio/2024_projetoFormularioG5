@@ -22,12 +22,17 @@ Arquivo –
 <body>
     <div id="conteudo">
         <header id="header">
-            <h1>Arquivo</h1>
+            <h1>
+                Arquivo
+            </h1>
+            <h4 class="subtitulo">
+                &starf; Projeto Regex &starf;<br/>
+                &sstarf; Primeiro Projeto TWIST-2024 &sstarf;
+            </h4>
         </header>
-
-        <section id="main">
-            
-            <br/><br/>
+        <br/>
+        <br/>
+        <section id="main"> 
             <fieldset>
                 <legend id="selecionar" >Selecione o tipo de arquivo:</legend>
                 <input type="radio" name="seletor" value="jpg"/>
@@ -40,52 +45,59 @@ Arquivo –
                 <input type="radio" name="seletor" value="csv"/>
                 <label for="radio">CSV</label>
             </fieldset>
-            <br/><br/><br/>
+            <br/>
+            <br/>
+            <br/>
             <fieldset>
                 <legend id="txt" >Regras nomenclatura:</legend>
                 <p>
                     &starf; Não possibilitar preencher o nome do arquivo com caracteres especiais (exceto underscore);<br/>
                     <br/>
-                    &starf;Iniciar com letra maiúscula;<br/>
+                    &starf; Iniciar com letra maiúscula;<br/>
                     <br/>
-                    &starf;Deve ter o tamanho mínimo de 8 caracteres e máximo de 15.
+                    &starf; Deve ter o tamanho mínimo de 8 caracteres e máximo de 15.
                 </p>
             </fieldset>
-            <br/><br/><br/>
+            <br/>
+            <br/>
+            <br/>
             <form>
                 <label for="arq">Arquivo:</label>
                 <input  type="file" name="arq" id="arq">
-                <br/><br/><br/>
-                <input class="bt" type="button" value="Limpar" id="btnLimpar">
-                &nbsp;&nbsp;&nbsp;
-                <input class="bt" type="button" value="submeter" id="btnSubmeter" name="submeter">
+                <br/>
+                <br/>
+                <br/>
+                <div id="botao">
+                    <input class="bt" type="button" value="limpar" id="btnLimpar">
+                    &nbsp;&nbsp;&nbsp;
+                    <input class="bt" type="button" value="submeter" id="btnSubmeter" name="submeter">
+                </div>
             </form>
-        </section>  
-
-        <br/><br/><br/><br/>
-        <nav id="navigator"> <!--Perguntar como fazemos para colocar a nav na lateral da tela-->
-            <a id="home" href="index.html">Home</a> &starf;
-            <a id="busca" href="busca.html">Busca</a> &starf;
-            <a id="arquivo" href="arquivo.html">Arquivo</a> &starf;
-            <a id="substituir" href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
-            <a id="cadastro" href="cadastro.html">Cadastro</a>
-        </nav>
-        <br/><br/><br/><br/><br/><br/>
-
+            <br/>
+            <br/>
+            <nav id="navigator">
+                <a id="home" href="index.html">Home</a> &starf;
+                <a id="busca" href="busca.html">Busca</a> &starf;
+                <a id="arquivo" href="arquivo.html">Arquivo</a> &starf;
+                <a id="substituir" href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
+                <a id="cadastro" href="cadastro.html">Cadastro</a>
+            </nav>
+            <br/>
+            <br/>
+        </section>
         <footer id="footer">    
             <p class="devs">Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
-                Projeto TWIST-2024<br/></p>
-                <br/>
-                <img src="img/css.gif" alt="gif de css." width="70" height="70">
-                <img src="img/html.gif" alt="gif de css." width="70" height="70">
-                <img src="img/js.webp" alt="gif de css." width="70" height="70">
+                Projeto TWIST-2024<br/>
+            </p>
+            <br/>
+            <img src="img/css.gif" alt="gif de css." width="70" height="70">
+            <img src="img/html.gif" alt="gif de css." width="70" height="70">
+            <img src="img/js.webp" alt="gif de css." width="70" height="70">
+            <br/>
             <p class="links">
             links usados para a criação desta página:<br/>
-
             - google fontes: <a class="link" href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
             - paleta de cores:  <a class="link" href="https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1" target="_blank">https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1 </a><br/>  
-
-            
             </p>
         </footer>
     </div>

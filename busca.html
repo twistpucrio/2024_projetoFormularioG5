@@ -11,81 +11,87 @@ Os resultados devem ser informados utilizando mensagens de alertas.
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 1 - TWIST</title>
-    <link rel="shortcut icon" href="img/logo-twist.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/style.css">
-    <script src="scripts/busca.js"></script>
-</head>
-<body>
-    <div id="conteudo">
-        <header id="header">
-            <h1>
-                Busca
-            </h1>
-            <h4 class="subtitulo">
-                &starf; Projeto Regex &starf;<br/>
-                &sstarf; Primeiro Projeto TWIST-2024 &sstarf;
-            </h4>
-        </header>
-        <section id="main">
-            <form class="borda-circular">
-                <br/><br/>
-                <section class="borda-circular">
-                    <fieldset>
-                        <legend id="selecionar">Selecione o tipo de verificação:</legend>
-                        <input type="radio" id="cEspecial" value="cEspecial" name="bolinha" />
-                        <label for="radio">Caracteres Especiais</label>
-                        <input type="radio" id="digNum" value="digNum" name="bolinha" />
-                        <label for="radio">Digitos Numéricos</label>
-                        <br/>
-                        <input type="radio" id="lMin" value="lMin" name="bolinha" />
-                        <label for="radio">Letras Minúsculas</label>&nbsp;&nbsp;&nbsp;
-                        <input type="radio" id="lMax" value="lMax"  name="bolinha" />
-                        <label for="radio">Letras Maiúsculas</label>
-                    </fieldset>
-                </section>
-                <br/><br/><br/>
-                <section class="borda-circular">
-                    <label id="txt" for="texto">Escreva seu texto: </label>
-                    <br/><br/>
-                    <textarea name="texto" id="texto" cols="60" rows="20"></textarea>                                                                        
-                </section>  
-                <br/>
-                <div id="botao">
-                    <input class="bt" name="limpar" type="button" value="limpar" id="botao_limpar"/>
-                    &nbsp;&nbsp;&nbsp;
-                    <input class="bt" name="submeter" type="button" value="submeter" id="botao_submeter"/>
-                </div>
-            </form>
-        <br/><br/><br/><br/>
-        <nav id="navigator">
-            <a id="home" href="index.html">Home</a> &starf;
-            <a id="busca" href="busca.html">Busca</a> &starf;
-            <a id="arquivo" href="arquivo.html">Arquivo</a> &starf;
-            <a id="substituir" href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
-            <a id="cadastro" href="cadastro.html">Cadastro</a>
-        </nav>
-        <br/><br/><br/><br/><br/><br/>
-        <footer id="footer">
-            <p class="devs">
-            Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
-            Projeto TWIST-2024<br/>
-            </p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto 1 - TWIST</title>
+        <link rel="shortcut icon" href="img/logo-twist.png" type="image/x-icon">
+        <link rel="stylesheet" href="style/style.css">
+        <script src="scripts/busca.js"></script>
+    </head>
+    <body>
+        <div id="conteudo">
+            <header id="header">
+                <h1>
+                    Busca
+                </h1>
+                <h4 class="subtitulo">
+                    &starf; Projeto Regex &starf;<br/>
+                    &sstarf; Primeiro Projeto TWIST-2024 &sstarf;
+                </h4>
+            </header>
             <br/>
-            <section>
-            <img src="img/css.gif" alt="gif de css." width="70" height="70">
-            <img src="img/html.gif" alt="gif de html." width="70" height="70">
-            <img src="img/js.webp" alt="gif de javascript." width="70" height="70">
+            <br/>
+            <section id="main">
+                    <form>
+                        <fieldset>
+                            <legend id="selecionar">Selecione o tipo de verificação:</legend>
+                            <input type="radio" id="cEspecial" value="cEspecial" name="bolinha" />
+                            <label for="radio">Caracteres Especiais</label>
+                            <input type="radio" id="digNum" value="digNum" name="bolinha" />
+                            <label for="radio">Digitos Numéricos</label>
+                            <br/>
+                            <input type="radio" id="lMin" value="lMin" name="bolinha" />
+                            <label for="radio">Letras Minúsculas</label>&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="lMax" value="lMax"  name="bolinha" />
+                            <label for="radio">Letras Maiúsculas</label>
+                        </fieldset>                       
+                        <br/>
+                        <br/>
+                        <br/>
+                        <section>
+                            <label id="txt" for="texto">Escreva seu texto: </label>
+                            <br/>
+                            <textarea name="texto" id="texto" cols="60" rows="20"></textarea>                                                                        
+                        </section>  
+                        <br/>
+                        <br/>
+                        <div id="botao">
+                            <input class="bt" name="limpar" type="button" value="limpar" id="botao_limpar"/>
+                            &nbsp;&nbsp;&nbsp;
+                            <input class="bt" name="submeter" type="button" value="submeter" id="botao_submeter"/>
+                        </div>
+                    </form>
+                <br/>
+                <br/>
+                <nav id="navigator">
+                    <a id="home" href="index.html">Home</a> &starf;
+                    <a id="busca" href="busca.html">Busca</a> &starf;
+                    <a id="arquivo" href="arquivo.html">Arquivo</a> &starf;
+                    <a id="substituir" href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
+                    <a id="cadastro" href="cadastro.html">Cadastro</a>
+                </nav>
+                <br/>
+                <br/>
             </section>
-            <p class="links">
-            Links usados para a criação desta página:<br/>
-            - google fontes: <a class="link" href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
-            - paleta de cores: <a class="link" href="https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1" target="_blank">https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1</a><br/>
-            </p>
-        </footer>
-    </div>
-</body>
+            <footer id="footer">
+                <p class="devs">
+                Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
+                Projeto TWIST-2024<br/>
+                </p>
+                <br/>
+                <section>
+                <img src="img/css.gif" alt="gif de css." width="70" height="70">
+                <img src="img/html.gif" alt="gif de html." width="70" height="70">
+                <img src="img/js.webp" alt="gif de javascript." width="70" height="70">
+                </section>
+                <br/>
+                <p class="links">
+                Links usados para a criação desta página:<br/>
+                - google fontes: <a class="link" href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>
+                - paleta de cores: <a class="link" href="https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1" target="_blank">https://www.figma.com/design/t8ndIzTzyMIuPKu1akhtUZ/Untitled?node-id=0-1&m=dev&t=vx7Ov3QU8ni5Xe6P-1</a><br/>
+                </p>
+            </footer>
+        </div>
+    </body>
 </html>

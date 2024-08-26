@@ -1,3 +1,24 @@
+<!--
+Cadastro – Nesta página temos um cadastro de perfil de usuário, contendo os campos: Nome, CPF, Data de Nascimento, Usuário, Email, senha e confirmação de senha. Todos os campos têm uma regra específica a ser seguida, relatado a seguir:
+
+Nome: Não permitir a digitação de números (dígitos numéricos);
+
+CPF: Precisamos verificar se tem 11 dígitos numéricos. Deve utilizar a máscara xxx.xxx.xxx-xx.  Não permitir digitar letras e ou caracteres especiais;
+
+Dt Nasc.: Solicita a data de nascimento do usuário padrão dd/mm/yyyy, ou seja, dia com dois dígitos, mês com dois dígitos e ano com 4 dígitos, todos separados por barras. Não permitir a digitação de outros caracteres além desses e dados fora desse padrão;
+
+Usuário: Não permite começar com números, mas pode haver números no final. Não permitir espaço em branco, os únicos caracteres especiais que pode ser utilizado é underscore e o ponto final, os demais são proibidos, não permitir letras maiúsculas;
+
+Email: todas as letras em minúsculo, os caracteres especiais permitidos são ponto final, underscore e um arroba. Deve haver algum texto antes e depois da arroba;
+
+Senha (1): Limita quantidade de caracteres (mínimo 8; máximo 15). Deve haver pelo menos uma letra maiúscula, um número e um caractere especial, não permitir o número zero;
+
+Senha (2): Deve haver uma verificação se o segundo campo da senha está igual ao primeiro.
+
+Quando uma das regras não for seguida deve-se avisar ao usuário por meio de mensagens, após clicar no botão “submeter”.
+
+-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,49 +36,47 @@
                 Cadastro
             </h1>
             <h4 class="subtitulo">
+                &starf; Projeto Regex &starf;<br/>
                 &sstarf; Primeiro Projeto TWIST-2024 &sstarf;
             </h4>
-            <nav id="navigator">
-                <a id="home" href="index.html">Home</a> &starf;
-                <a id="busca" href="busca.html">Busca</a> &starf;
-                <a id="arquivo" href="arquivo.html">Arquivo</a> &starf;
-                <a id="substituir" href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
-                <a id="cadastro" href="cadastro.html">Cadastro</a>
-            </nav>
             <br/>
         </header>
         <section id="main">
             <br/>
             <form>
                 <fieldset>
+                    <br\>
                     <legend id="dados">Dados Pessoais:</legend>
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" value="Nome" name="Nome"/>
+                    <input class="caixa" type="text" id="nome" value="Nome" name="Nome"/>
                     <br/>
                     <br/>
                     <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" value="ddd.ddd.ddd-dd" name="ddd.ddd.ddd-dd"/>
+                    <input class="caixa" type="text" id="cpf" value="ddd.ddd.ddd-dd" name="ddd.ddd.ddd-dd"/>
                     <br/>
                     <br/>
                     <label for="data">Data:</label>
-                    <input type="text" id="data" value="dd/mm/aaaa" name="Data"/>
+                    <input class="caixa" type="text" id="data" value="dd/mm/aaaa" name="Data"/>
+                    <br\>
                 </fieldset>
                 <br/>
                 <fieldset>
+                    <br\>
                     <label for="usuario">Usuário:</label>
-                    <input type="text" id="usuario" value="Usuário" name="Usuario"/>
+                    <input class="caixa" type="text" id="usuario" value="Usuário" name="Usuario"/>
                     <br/>
                     <br/>
                     <label for="email">Email:</label>
-                    <input type="text" id="email" value="Email" name="Email"/>
+                    <input class="caixa" type="text" id="email" value="Email" name="Email"/>
                     <br/>
                     <br/>
                     <label for="senha_1">Senha:</label>
-                    <input type="text" id="senha_1" value="Senha" name="Senha"/>
+                    <input class="caixa" type="text" id="senha_1" value="Senha" name="Senha"/>
                     <br/>
                     <br/>
                     <label for="senha_2">Senha:</label>
-                    <input type="text" id="senha_2" value="Senha" name="Senha"/>
+                    <input class="caixa" type="text" id="senha_2" value="Senha" name="Senha"/>
+                    <br\>
                 </fieldset>
                 <br/>
                 <br/>
@@ -67,9 +86,18 @@
                     <input class="bt" name="submeter" type="button" value="submeter" id="botao_submeter"/>
                 </div>
             </form>
+            <br/>
+            <br/>
+            <nav id="navigator">
+                <a id="home" href="index.html">Home</a> &starf;
+                <a id="busca" href="busca.html">Busca</a> &starf;
+                <a id="arquivo" href="arquivo.html">Arquivo</a> &starf;
+                <a id="substituir" href="buscar-e-substituir.html">Busca e Substituir</a> &starf;
+                <a id="cadastro" href="cadastro.html">Cadastro</a>
+            </nav>
+            <br/>
+            <br/>
         </section>  
-        <br/>
-        <br/>
         <footer id="footer">
             <p class="devs">
                 Desenvolvido por: Julia Simão e Mariana Ribeiro<br/>
@@ -79,6 +107,7 @@
             <img src="img/css.gif" alt="gif de css." width="70" height="70">
             <img src="img/html.gif" alt="gif de html." width="70" height="70">
             <img src="img/js.webp" alt="gif de javascript." width="70" height="70">
+            <br/>
             <p class="links">
                 links usados para a criação desta página:<br/>
                 - google fontes: <a class="link" href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br/>

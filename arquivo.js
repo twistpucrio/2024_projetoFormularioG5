@@ -3,7 +3,6 @@
 //Deve ter o tamanho mínimo 8 caracteres e máximo 15
 //Os resultados podem ser informados utilizando mensagens de alertas.
 
-
 function limpar(){
     
     let atividade = document.getElementsByName("seletor");
@@ -30,18 +29,24 @@ function caracteresValidos(str){
     }
     return true;
 }
-
  
 /*
 no widow:
 // Analisar nome do arquivo. Regras -> Não pode ter caractere especial, somente "_", deve iniciar com letra maiúscula, tamanho mínimo 8 e máximo 15
-       
-            */
+        let fileName = file.name.split('.')[0];
+        let lengthValid = fileName.length >= 8 && fileName.length <= 15;
+
+        if (!startsWithUpperCase(fileName) || 
+            !isValidCharacters(fileName) || 
+            !lengthValid) {
+            alert("O nome do arquivo deve:\n- Começar com uma letra maiúscula\n- Ter entre 8 e 15 caracteres\n- Não conter caracteres especiais, exceto underscore (_).");
+            return;
+        }
+*/
 
 
 window.addEventListener("load", function(){
     let btnLimpar = document.querySelector("#btnLimpar");
-    let btnValidar = document.querySelector('#btnValidar');
 
     btnLimpar.addEventListener("click", function(){
             limpar();
@@ -50,6 +55,7 @@ window.addEventListener("load", function(){
     // FUNÇÃO SUBMETER
 
     
+
         //id botão submeter: btnSubmeter
         //name botão submeter: submeter
 
@@ -97,13 +103,8 @@ window.addEventListener("load", function(){
                     alert("O nome do arquivo deve:\n- Começar com uma letra maiúscula\n- Ter entre 8 e 15 caracteres\n- Não conter caracteres especiais, exceto underscore (_).");
                     return;
                 }
-
-                
+          
                 alert("Arquivo carregado com sucesso! :)");
-                
-
-
-            
             });
     });
 

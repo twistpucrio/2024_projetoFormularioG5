@@ -55,17 +55,21 @@ não permitir letras maiúsculas: OK.
 
 function formato_usuario(usuario) {
     if (usuario.search(/[0-9]/) == 0) { //caso tenha números no começo. caso impróprio.
+        console.log("O usuário começa com número(s).")
         return false;
     }
     else if (usuario.search(/\s/) != -1) { //caso tenha espaço em branco. caso impróprio. (caso de regex possível, testar: /^[ \t]+$/)
         //alert("espaço em branco com /\s/: " + usuario.search(/\s/));
         //alert("espaço em branco com /^[ \t]+$/: " + usuario.search(/^[ \t]+$/));
+        console.log("O usuário possui espaço em branco.")
         return false;
     }
     else if (usuario.search(/[^A-Za-z0-9._]/) != -1) { //caso tenha caracteres especiais, fora ponto final e underscore. caso impróprio.
+        console.log("O usuário possui caractere(s) especiais não permitidos. Os caracteres especiais permitidos são o ponto final e underscore.")
         return false;
     }
     else if (usuario.search(/[A-Z]/) != -1) { //caso tenha letra maiúscula. caso impróprio.
+        console.log("O usuário possui letra(s) maiúscula(s).")
         return false;
     }
     else {
@@ -82,12 +86,15 @@ deve haver algum texto antes e depois da arroba: OK.
 
 function formato_email(email) {
     if (email.search(/[A-Z]/) != -1) { //caso tenha letra maiúscula. caso impróprio.
+        console.log("O email possui letra(s) maiúscula(s).");
         return false;
     }
     else if (email.search(/[^A-Za-z0-9._@]/) != -1) { //caso tenha caracteres especiais, fora ponto final, underscore e um arroba. caso impróprio.
+        console.log("O email possui caractere(s) especiais não permitidos. Os caracteres especiais permitidos são o ponto final, underscore e um arroba.");
         return false;
     }
     else if (email.search(/^[a-z0-9._]+@[a-z0-9._]+$/) == -1) { //caso NÃO tenha texto antes e depois do arroba. caso impróprio.
+        console.log("O email não possui algum texto antes e depois da arroba.");
         return false;
     }
     else {
@@ -107,18 +114,23 @@ não permitir o número zero: OK.
 
 function formato_senha(senha) {
     if (senha.lenght < 8 || senha.lenght > 15) { //caso que quantidade de caracteres não está própria.
+        console.log("A senha não possui a quantidade de caracteres própria (mínimo 8; máximo 15).");
         return false;
     }
     else if (senha.search(/[A-Z]/) == -1) { //caso onde não tem letra maiúscula.
+        console.log("A senha não possui pelo menos uma letra maiúscula.");
         return false;
     }
     else if (senha.search(/[0-9]/) == -1) { //caso onde não tem número.
+        console.log("A senha não possui pelo menos um número.")
         return false;
     }
     else if (senha.search(/[^A-Za-z0-9]/) == -1) { //caso onde não tem nenhum caracter especial. underline considerado como caracter especial.
+        console.log("A senha não possui pelo menos um caractere especial.");
         return false;
     }
     else if (senha.search(/[0]/) != -1) { //caso onde tem o número 0.
+        console.log("A senha possui o número zero, que não é permitido.")
         return false;
     }
     else {
@@ -176,22 +188,22 @@ window.addEventListener("load",
                     }
                     else {
                         if (formato_nome(nome) == false) {
-                            alert("O formato do campo Nome não está próprio. Campo Nome não ter nenhum número.");
+                            alert("O formato do campo Nome não está próprio.\nCampo Nome não deve ter nenhum número.");
                         }
                         if (formato_cpf(cpf) == false) {
-                            alert("O formato do campo CPF não está próprio. Campo CPF deve ter o formato: ddd.ddd.ddd-dd (sendo que d representa um dígito numérico).");
+                            alert("O formato do campo CPF não está próprio.\nCampo CPF deve ter o formato: ddd.ddd.ddd-dd (sendo que d representa dígitos numéricos).");
                         }
                         if (formato_data(data) == false) {
-                            alert("O formato do campo Data não está próprio. Campo Data deve ter o formato:  dd/mm/aaaa.");
+                            alert("O formato do campo Data não está próprio.\nCampo Data deve ter o formato: dd/mm/aaaa (sendo que d, m e a representam dígitos numéricos - dia, mês e ano, respectivamente).");
                         }
                         if (formato_usuario(usuario) == false) {
-                            alert("O formato do campo Usuario não está próprio. Campo Usuario deve .");
+                            alert("O formato do campo Usuario não está próprio.\nCampo Usuario deve:\n-não permite começar com números (mas pode haver números no final);\n-não permitir espaço em branco;\n-os únicos caracteres especiais que pode ser utilizado é underscore e o ponto final (os demais são proibidos);\n-não permitir letras maiúsculas.");
                         }
                         if (formato_email(email) == false) {
-                            alert("O formato do campo Email não está próprio. Campo Email deve ter o formato:  .");
+                            alert("O formato do campo Email não está próprio.\nCampo Email deve:\n-ter todas as letras em minúsculo;\n-permitir os caracteres especiais ponto final, underscore e um arroba;\n-haver algum texto antes e depois da arroba.");
                         }
                         if (formato_senha(senha_1) == false) {
-                            alert("O formato do campo Senha não está próprio. Campo Senha deve ter o formato: .");
+                            alert("O formato do campo Senha não está próprio.\nCampo Senha deve:\n-ter quantidade de caracteres (mínimo 8; máximo 15);\n-ter pelo menos uma letra maiúscula;\n-ter pelo menos um número;\n-ter pelo menos um caractere especial;\n-não permitir o número zero.");
                         }
                         if (senhas_iguais(senha_1, senha_2) == false) {
                             alert("As duas senhas não estão iguais. Favor, cheque o segundo campo de senha e garanta que está igual ao primeiro.");
@@ -213,3 +225,5 @@ window.addEventListener("load",
         });
     }
 )
+
+//COMPLETO
