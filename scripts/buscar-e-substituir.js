@@ -22,9 +22,25 @@ window.addEventListener("load", function(){
     btnLimpar.addEventListener("click", function(){
         limpar();
 })
+    btnSubmeter.addEventListener("click", function(){
+        substituir();
+        });
 
-    let evento_submeter = document.querySelector('#btnSubmeter');
-    evento_submeter.addEventListener("click", function(){
-    
-    }) 
 });
+
+
+
+function substituir(){
+    let texto = document.querySelector("#texto");
+    let pesquisa=  document.querySelector("#pesquisa");
+    let substitui =  document.querySelector("#substituir");
+
+    let textoInicial = texto.value;
+    let partePesquisa = pesquisa.value;
+    let textoSubstituido = substitui.value;
+
+    let resultado = textoInicial.replace(new RegExp(partePesquisa, "g"), textoSubstituido);
+    alert("Texto substiruído:\n " + resultado);
+    texto.value = resultado;
+}
+

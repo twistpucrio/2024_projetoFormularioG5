@@ -125,7 +125,7 @@ window.addEventListener("load",
                             }
 
                             else {
-                                alert("match max: " + match_letras_maiusculas(texto));
+                                //alert("match max: " + match_letras_maiusculas(texto));
                                 let n_ocorrencias_max = ocorrencias(match_letras_maiusculas(texto));
                                 alert("Padrão letras maiúsculas encontrado, quantidade de ocorrências: " + n_ocorrencias_max + ".");
                             }
@@ -139,7 +139,7 @@ window.addEventListener("load",
                             }
 
                             else {
-                                alert("match min: " + match_letras_minusculas(texto));
+                                //alert("match min: " + match_letras_minusculas(texto));
                                 let n_ocorrencias_min = ocorrencias(match_letras_minusculas(texto));
                                 alert("Padrão letras minúsculas encontrado, quantidade de ocorrências: " + n_ocorrencias_min + ".");
                             }
