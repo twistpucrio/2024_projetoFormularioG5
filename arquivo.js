@@ -15,11 +15,11 @@ function limpar(){
 }
 
 function iniciaLetraMaiuscula(str){
-    return tamStr > 0 && str[0] === str[0].toUpperCase();
+    return str.length > 0 && str[0] === str[0].toUpperCase();
 }
 
 function caracteresValidos(str){
-    for(let i=0;i<tamStr;i++){
+    for(let i=0;i<str.length;i++){
         let c = str[i];
         if(!((c>= 'A' && char <= 'Z')||
             (c>= 'a' && char <= 'z') ||
@@ -35,15 +35,7 @@ function caracteresValidos(str){
 /*
 no widow:
 // Analisar nome do arquivo. Regras -> Não pode ter caractere especial, somente "_", deve iniciar com letra maiúscula, tamanho mínimo 8 e máximo 15
-        let fileName = file.name.split('.')[0];
-        let lengthValid = fileName.length >= 8 && fileName.length <= 15;
-
-        if (!startsWithUpperCase(fileName) || 
-            !isValidCharacters(fileName) || 
-            !lengthValid) {
-            alert("O nome do arquivo deve:\n- Começar com uma letra maiúscula\n- Ter entre 8 e 15 caracteres\n- Não conter caracteres especiais, exceto underscore (_).");
-            return;
-        }
+       
             */
 
 
@@ -95,18 +87,24 @@ window.addEventListener("load", function(){
                 return;
                 }
                 // Analisar nome do arquivo. Regras -> Não pode ter carac especial, somente "_", deve iniciar com letra mai, tam min 8 e max 15
+        
                 let fileName = file.name.split('.')[0];
-
+                let lengthValid = fileName.length >= 8 && fileName.length <= 15;
+        
+                if (!iniciaLetraMaiuscula(fileName) || 
+                    !caracteresValidos(fileName) || 
+                    !lengthValid) {
+                    alert("O nome do arquivo deve:\n- Começar com uma letra maiúscula\n- Ter entre 8 e 15 caracteres\n- Não conter caracteres especiais, exceto underscore (_).");
+                    return;
+                }
 
                 
-
-                
-                alert("Arquivo carregado com sucesso! :)")
+                alert("Arquivo carregado com sucesso! :)");
                 
 
 
-            }
-        )
+            
+            });
     });
 
    
