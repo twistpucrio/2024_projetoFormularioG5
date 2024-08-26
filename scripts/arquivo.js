@@ -3,23 +3,20 @@
 //Deve ter o tamanho mínimo 8 caracteres e máximo 15
 //Os resultados podem ser informados utilizando mensagens de alertas.
 
-
 function limpar(){
-    
     let atividade = document.getElementsByName("seletor");
 
     for (at of atividade){
         at.checked = false;
     }
-
 }
 
 function iniciaLetraMaiuscula(str){
-    return tamStr > 0 && str[0] === str[0].toUpperCase();
+    return str.length > 0 && str[0] === str[0].toUpperCase();
 }
 
 function caracteresValidos(str){
-    for(let i=0;i<tamStr;i++){
+    for(let i=0;i<str.length;i++){
         let c = str[i];
         if(!((c>= 'A' && char <= 'Z')||
             (c>= 'a' && char <= 'z') ||
@@ -30,7 +27,6 @@ function caracteresValidos(str){
     }
     return true;
 }
-
  
 /*
 no widow:
@@ -44,12 +40,11 @@ no widow:
             alert("O nome do arquivo deve:\n- Começar com uma letra maiúscula\n- Ter entre 8 e 15 caracteres\n- Não conter caracteres especiais, exceto underscore (_).");
             return;
         }
-            */
+*/
 
 
 window.addEventListener("load", function(){
     let btnLimpar = document.querySelector("#btnLimpar");
-    let btnValidar = document.querySelector('#btnValidar');
 
     btnLimpar.addEventListener("click", function(){
             limpar();
@@ -58,6 +53,7 @@ window.addEventListener("load", function(){
     // FUNÇÃO SUBMETER
 
     
+
     //id botão submeter: btnSubmeter
     //name botão submeter: submeter
 
@@ -89,20 +85,23 @@ window.addEventListener("load", function(){
             pdf: ['pdf'],
             csv: ['csv']
         }
-
+        
         // Verifica se a extensão do arquivo é permitida para o tipo selecionado
         if (!validSelection[selectedFileType.value].includes(fileType)) {
-        alert("Tipo de arquivo não permitido! Por favor, selecione o tipo de arquivo correto.");
-        return;
+            alert("Tipo de arquivo não permitido! Por favor, selecione o tipo de arquivo correto.");
+            return;
         }
 
         // Analisar nome do arquivo. Regras -> Não pode ter carac especial, somente "_", deve iniciar com letra mai, tam min 8 e max 15
         let fileName = file.name.split('.')[0];
-
-        alert("Arquivo carregado com sucesso! :)")
-                
-
-
+        let lengthValid = fileName.length >= 8 && fileName.length <= 15;
+        
+        if (!iniciaLetraMaiuscula(fileName) || !caracteresValidos(fileName) || !lengthValid) {
+            alert("O nome do arquivo deve:\n- Começar com uma letra maiúscula\n- Ter entre 8 e 15 caracteres\n- Não conter caracteres especiais, exceto underscore (_).");
+            return;
+        }
+          
+        alert("Arquivo carregado com sucesso! :)");
     });
 });
 
