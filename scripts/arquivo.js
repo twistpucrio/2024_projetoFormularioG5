@@ -5,10 +5,13 @@
 
 function limpar(){
     let atividade = document.getElementsByName("seletor");
+    let arquivo = document.getElementById("arq");
 
     for (at of atividade){
         at.checked = false;
     }
+
+    arquivo.value = "";
 }
 
 function iniciaLetraMaiuscula(str){
@@ -18,10 +21,7 @@ function iniciaLetraMaiuscula(str){
 function caracteresValidos(str){
     for(let i=0;i<str.length;i++){
         let c = str[i];
-        if(!((c>= 'A' && char <= 'Z')||
-            (c>= 'a' && char <= 'z') ||
-            //(c>= '0' && char <= '9') ||
-             c==='_' )) {
+        if(!((c>= 'A' && c <= 'Z')|| (c>= 'a' && c <= 'z') || (c>= '0' && c <= '9') || c==='_' )) {
             return false;
         }
     }
